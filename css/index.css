@@ -38,7 +38,7 @@ body {
 
 .nav-item .btn{
    background-color: var(--main-content-background-color);
-    width: 100px;
+    width: 180px;
     margin: 10px;
 }
 

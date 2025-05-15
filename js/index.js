@@ -1,45 +1,51 @@
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', () => {
+    // Menü betöltése
+    fetch('/menu.html')
+        .then(response => response.text())
+        .then(html => {
+            const menu = document.getElementById('menu');
+            if (menu) {
+                menu.innerHTML = html;
+            }
 
-    $('a[href^="#"]').on('click',function(event){
-        event.preventDefault();
-        // $('html,body').animate({scrollTop:$(this.hash).offset().top-120}, 500);
-        window.scrollTo({
-            top: $(this.hash).offset().top-100,
-            behavior: 'smooth'
-        });
-    });
-
-// document ready
+            // Ha az oldal URL-jében már van hash, akkor görgetés
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const target = document.querySelector(window.location.hash);
+                    if (target) {
+                        const top = target.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+        })
+        .catch(err => console.error('Menü betöltési hiba:', err));
 });
 
+// Hash navigáció működése Bootstrap menü mellett
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href*="#"]');
+    if (!link) return;
 
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function(e) {
-//         console.log("scroll")
-//         e.preventDefault();
-//
-//         const targetElement = document.querySelector(this.getAttribute('href'));
-//         const offset = 120; // A görgetés mennyisége
-//
-//         window.scrollTo({
-//             top: targetElement.offsetTop - offset,
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+    const href = link.getAttribute('href');
+    const url = new URL(href, window.location.href);
 
-// $(document).ready(function(){
-//     $('a[href^="#"]').on('click',function (e) {
-//         e.preventDefault();
-//         $('html,body').animate({scrollTop:$(this.hash).offset().top-140}, 500);
-//
-//         // var target = this.hash,
-//         //     $target = $(target);
-//         //
-//         // $('html, body').stop().animate({
-//         //     'scrollTop': $target.offset().top-1400
-//         // }, 900, 'swing', function () {
-//         //     window.location.hash = target;
-//         // });
-//     });
-// });
+    // Csak akkor kezeljük, ha ugyanarra az oldalra mutat
+    if (url.pathname === window.location.pathname) {
+        e.preventDefault();
+        const targetId = url.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            history.pushState(null, '', '#' + targetId);
+            const top = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+
+        // Menü bezárása mobilon
+        const navbar = document.querySelector('.navbar-collapse.show');
+        if (navbar) {
+            new bootstrap.Collapse(navbar, { toggle: true }).hide();
+        }
+    }
+});

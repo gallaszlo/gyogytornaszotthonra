@@ -24,6 +24,7 @@
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -40,40 +41,10 @@
     <script>
         gtag('event', 'conversion', {'send_to': 'AW-11537274569/KG0ZCKmW6v8ZEMmts_0q'});
     </script>
+
 </head>
 <body>
-    <div id="navbar" class="font-style navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img class="logo" src="images/logo.png" alt="Gyógytornász otthonra"/></a>
-
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                    <li class="nav-item">
-                        <a class="btn" href="#rolam" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Rólam</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" href="#kezelesek" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Kezelések</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" href="#arak" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Árak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" href="#kapcsolat" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Kapcsolat</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div id="menu"></div>
 
     <div class="page-content">
         <div id="rolam" class="block">
@@ -105,69 +76,6 @@
             </div>
         </div>
 
-        <div id="arak" class="block top-padding-xxl">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12"><h1>Árak</h1></div>
-                </div>
-                <div class="line"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row top-padding-m">
-                            <div class="col-sm-12"><h4>Otthon</h4></div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">első alkalom: állapotfelmérés, korábbi leletek áttekintése, egyénre szabott kezelési terv felállítása: 45 perc</div>
-                            <div class="col-4 text-end"> 17.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">további gyógytorna alkalmanként 45 perc</div>
-                            <div class="col-4 text-end"> 15.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">5 alkalmas bérlet</div>
-                            <div class="col-4 text-end"> 70.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">10 alkalmas bérlet</div>
-                            <div class="col-4 text-end">130.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-12">(a bérletek a vásárlástól számított 60 napig érvényesek)</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row  top-padding-m">
-                            <div class="col-12"><h4>Rendelőben</h4></div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">gyógytorna, első alkalom: állapotfelmérés, kezelési terv felállítása</div>
-                            <div class="col-4 text-end"> 20.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">további gyógytorna alkalmanként 45 perc</div>
-                            <div class="col-4 text-end"> 17.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">ADT-kezelés, első alkalom kb. 90 perc </div>
-                            <div class="col-4 text-end"> 35.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">ADT-kontroll</div>
-                            <div class="col-4 text-end"> 17.000 Ft</div>
-                        </div>
-                        <div class="row top-padding-m">
-                            <div class="col-8">Gyógytorna + manuálterápia 50 perc </div>
-                            <div class="col-4 text-end"> 20.000 Ft</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row top-padding-xxl">
-                    <img src="images/kapcsolat.jpg" alt="gyógytorna árak" class="rounded img-fluid">
-                </div>
-            </div>
-        </div>
-
         <div id="gyik" class="block top-padding-xxl">
             <div class="container">
                 <h1>Milyen esetekben javasolt a gyógytorna?</h1>
@@ -189,6 +97,64 @@
                     <li class="list-group-item">csontritkulás</li>
                     <li class="list-group-item">sztrók utáni rehabilitáció</li>
                 </ul>
+                <div class="row top-padding-xxl">
+                    <img src="images/kapcsolat.jpg" alt="gyógytorna árak" class="rounded img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div id="ajanlatok" class="block top-padding-xxl">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"><h1>Ajánlatok</h1></div>
+                </div>
+                <div class="line"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                    <div class="col">
+                        <a href="/idoseknek" class="text-decoration-none text-dark">
+                            <div class="card h-100 text-center shadow-sm">
+                                <img src="/images/idoseknek.PNG" class="card-img-top" alt="Időseknek">
+                                <div class="card-body">
+                                    <h5 class="card-title">Időseknek</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="/baleseteseknek" class="text-decoration-none text-dark">
+                            <div class="card h-100 text-center shadow-sm">
+                                <img src="images/balesetes.PNG" class="card-img-top" alt="Baleseteseknek">
+                                <div class="card-body">
+                                    <h5 class="card-title">Baleseteseknek</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="/mutotteknek" class="text-decoration-none text-dark">
+                            <div class="card h-100 text-center shadow-sm">
+                                <img src="images/mutet_kezdolap.PNG" class="card-img-top" alt="Műtötteknek">
+                                <div class="card-body">
+                                    <h5 class="card-title">Műtötteknek</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="/gerincproblemasoknak" class="text-decoration-none text-dark">
+                            <div class="card h-100 text-center shadow-sm">
+                                <img src="images/gerincproblema.PNG" class="card-img-top" alt="Gerincproblémásoknak">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gerincproblémásoknak</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
