@@ -154,3 +154,26 @@ body {
 .list-group-item{
     background-color: var(--main-content-background-color);
 }
+
+.patreon-button{
+    background-color: #e2553d;
+    border-color: #e2553d;
+    color: white;
+}
+
+.patreon-button:hover {
+    background-color: #f05a3c;
+    transform: scale(1.03);
+    color: white;
+}
+
+.patreon-button:active, patreon-button-color:focus {
+    background-color: #c94435 !important;
+    transform: scale(0.98);
+    color: white  !important;
+    outline: none;
+}
+
+.patreon-button:focus-visible {
+    outline: 2px solid #f05a3c;
+}
